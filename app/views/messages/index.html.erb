@@ -11,12 +11,20 @@
     <% end %>
   </div>
 </div>
-
+<table width="600" cellspacing="5">
+  <tr>
+  <td valign="top">
 <%= form_for(Message.new) do |f| %>
   名前:
   <%= f.text_field :name %>
-
+  </td>
+  <td valign="top">
   内容:
-  <%= f.text_field :body %>
+  <%= f.text_area :body %>
+  </td>
+  <td valign="top">
   <%= f.submit class: "btn btn-sm btn-primary" %>
+  </td>
 <% end %>
+</tr>
+</table>
